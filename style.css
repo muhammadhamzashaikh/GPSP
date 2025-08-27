@@ -1,0 +1,296 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #101820, #1a1a1a);
+  padding: 15px 20px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #f26722;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #f26722, #f78d45);
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  animation: slideInDown 0.7s ease;
+}
+
+.hero .btn {
+  padding: 12px 25px;
+  background: #101820;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero .btn:hover {
+  background: white;
+  color: #101820;
+  transform: scale(1.05);
+}
+
+/* Product Section */
+.products {
+  flex: 1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+  color: #101820;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  animation: fadeIn 1s ease;
+}
+
+.product-card, .cart-items div {
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  font-weight: bold;
+  color: #f26722;
+  margin-bottom: 8px;
+}
+
+.product-card button, .btn {
+  background: #101820;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.product-card button:hover,
+.btn:hover {
+  background: #f26722;
+  transform: scale(1.03);
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s ease;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  max-width: 420px;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #f26722;
+  outline: none;
+}
+
+/* Cart Footer */
+.cart-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cart-footer h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #101820;
+}
+
+.cart-footer .btn {
+  display: inline-block;
+  background: #f26722;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.cart-footer .btn:hover {
+  background: #101820;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background: #101820;
+  color: #fff;
+  text-align: center;
+  padding: 15px 5vw;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-top: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #101820;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}

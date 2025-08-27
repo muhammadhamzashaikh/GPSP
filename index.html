@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPS Perfumes - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">GPS Perfumes</div>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </header>
+  <section class="hero">
+    <h1>Discover Your Signature Scent</h1>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </section>
+  <section class="products">
+    <h2>Featured Perfumes</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <a href="product1.html"><img src="images/perfume1.jpg.jpg" alt="Royal Oud" /></a>
+        <h3>Royal Oud</h3>
+        <p>Rs. 2,499</p>
+        <button onclick="addToCart('Royal Oud', 2499)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <a href="product2.html"><img src="images/perfume3.jpg" alt="Velvet Musk" /></a>
+        <h3>Velvet Musk</h3>
+        <p>Rs. 2,199</p>
+        <button onclick="addToCart('Velvet Musk', 2199)">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <a href="product3.html"><img src="images/perfume2.jpg" alt="Amber Noir" /></a>
+        <h3>Amber Noir</h3>
+        <p>Rs. 2,799</p>
+        <button onclick="addToCart('Amber Noir', 2799)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  <footer>&copy; 2025 GPS Perfumes</footer>
+  <script src="script.js"></script>
+</body>
+</html>
